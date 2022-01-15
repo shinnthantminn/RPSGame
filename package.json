@@ -1,0 +1,17 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "that is My first Web Game Project...",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d Dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://shinnthantminn.github.io/RPSGame/",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPS</title>
+    
+    <!--Icon-->
+    <link rel="shortcut icon" href="./img/rock.png" type="image/x-icon">
+
+    <!--for style-->
+    <link rel="stylesheet" href="./Style/style.css">
+
+    <!--for FontAwaSome-->
+    <link rel="stylesheet" href="./VENDOR/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body class="bg-primary position-relative">
+
+<div id="intro" class="container-xxl h-100 pt-lg-5">
+    <div class="row pt-0 pt-lg-5 mt-lg-5 ps-3 ps-lg-0">
+        <div class="col-12 col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <div class="font-monospace">
+                <h1 class="fw-bolder text-info display-3 mb-0  header">
+                    Rock
+                    <img src="./img/rock.png" class="img mb-4" alt="">
+                </h1>
+                <h1 class="fw-bolder text-info  display-3 mb-0 header">
+                    Paper
+                    <img src="./img/paper.png" class="img mb-4" alt="">
+                </h1>
+                <h1 class="fw-bolder text-info display-3 mb-0  header">
+                    Scissors
+                    <img src="./img/scissors.png" class="img mb-4" alt="">
+                </h1>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 order-1 order-lg-2 py-5 py-lg-0">
+            <div>
+                <img src="./img/pngaaa.com-3313830.png" class="img-fluid px-5 px-lg-0" alt="">
+            </div>
+        </div>
+
+        <div class="col-12 pt-5 mt-5 order-3 order-lg-3">
+            <div class="d-flex pt-lg-5 mt-lg-5 justify-content-center">
+                <button id="btn" class="btn btn-secondary text-white px-5 py-0 border border-dark rounded-pill fs-2">
+                    <span class="px-3">Play Game</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-6 pt-5 mt-0 mt-lg-3 order-4 order-lg-4">
+            <p class="pt-5 mb-0">©TerryCoder/2021.2022
+                <br> develope By Terry</p>
+        </div>
+    </div>
+</div>
+
+<div id="inGame" class="container-xxl d-none">
+
+    <div class="row justify-content-center pt-5">
+        <div class="col-12 col-lg-8 bg-success p-5 rounded-3 shadow-lg">
+            <div class="d-flex">
+                <div class="" id="playerLife">
+                    <h1 class="text-white">Player</h1>
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                </div>
+                <div class="text-end" id="ComputerLife">
+                    <h1 class="text-white">Computer</h1>
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                    <img src="./img/Daco_3066830.png" class="heart" alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-around pb-5 mt-5 pt-3">
+                <div>
+                    <img src="./img/rock.png" id="player" alt="" class="tool player">
+                </div>
+
+                <div class="text-center">
+                    <img src="./img/rock.png" id="computer" alt="" class="tool computer">
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12 col-lg-6 mt-5">
+            <div class="d-flex justify-content-center pe-4">
+                <button value="0" id="rock" class="btn btn-success rock rounded-circle p-0 ms-3">
+                    <img src="./img/rock.png" id="0"  class="photo" alt="">
+                </button>
+                <button value="1" id="paper" class="btn btn-success paper rounded-circle p-0 p-md-2 ms-3">
+                    <img src="./img/paper.png" id="1"  class="photo" alt="">
+                </button>
+                <button value="2" id="scissor" class="btn btn-success scissors rounded-circle p-0 p-md-2 ms-3">
+                    <img src="./img/scissors.png" id="2" class="photo" alt="">
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container d-none" id="GameOverShower">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center text-danger pt-5">
+                <h1 class="display-1" id="gameOver"></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed forZ" data-bs-target="#modal" data-bs-toggle="modal">
+    <button class="btn btn-secondary btn rounded-circle">
+        <i class="fas fa-cog text-white pt-2"></i>
+    </button>
+</div>
+
+<div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Setting</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="switch" role="switch">
+                    <label for="switch" class="form-label">Sound And Music</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--for Custom JavaScript-->
+<script src="./Script/script.js"></script>
+
+<!--for bootstrap5 Bundle Js-->
+<script src="VENDOR/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
